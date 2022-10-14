@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./re.css">
+</head>
+<body>
+   <from id="signup">
+    <fieldset>
+        <legend>로그인정보</legend>
+        <ul>
+            <li>
+                <label for="">아이디</label>
+                <input id="userid" name="userid" type="text" required autofocus>
+            </li>
+            <li>
+                <label for="">비밀번호</label>
+                <input id="pwd1" name="pwd1" type="password" required>
+            </li>
+            <li>
+                <label for="">비밀번호 확인</label>
+                <input id="pwd1" name="pwd1" type="password" required>
+            </li>
+            <li>
+                <label for="level">회원등급</label>
+                <input id="level" name="level" type="text" readonly value="준회원">
+            </li>
+        </ul>
+        <fieldset>
+            <legend>개인정보</legend>
+            <ul>
+                <li>
+                    <label for="fullname">이름</label>
+                    <input id="fullname" name="fullname" type="text" placeholder="5자 미만 공백없이 입력" required>
+                </li>
+                <li>
+                    <label for="email">이메일</label>
+                    <input id="email" name="email" type="email" placeholder="abc@naver.com" autocomplete="off" required>
+                </li>
+                <li>
+                    <label for="tel">연락처</label>
+                    <input id="tel" name="tel" type="tel" required autocomplete="off">
+                </li>
+            </ul>
+        </fieldset>
+    </fieldset>
+     <fieldset>
+        <button type="submit">제출</button>
+     </fieldset>
+   </from> 
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /*  1.*(전체태그) : body head html까지 적용 */
+        /* * { */
+            /* color: slateblue; */
+            /* font-style: 20px; */
+        /* } */
+
+
+    /* 2.태그(타입 선택자) */
+        h1
+         { color: darkorange ;}
+
+
+      /* 3.클래스선택자 : 공통적으로 스타일을 적용할때 */
+     /* title 사용시 앞에 . 필수 * class는 여러개가능 다른거적용시 띄어쓰기/
+     /* .title { */
+        /* font-size: 6px; */
+        /* color: palevioletred; */
+     /* } */
+     /* class명은 의미가 있는 이름으로 만들어주기*/
+
+
+     /* 4. id 선택자 : */
+     /* id명은 의미가 있는 이름으로 각각 다르게 해줘야 함 (유일한값/중복금지) */
+     /* #board { */
+        /* color: rgb(199, 98, 174); */
+     /* } */
+     /* <title>상품 소개 페이지</title> */
+  /* <style> */
+    /* #container { */
+      /* width: 500px;  /* 너비 */
+      /* margin: 10px auto;  바깥 여백 */
+      /* padding: 10px;  테두리와 내용 사이 여백  */
+      /* border: 1px solid #000;  테두리 */
+    /* } */
+    /* #container {color: indigo;}     */
+  /* </style> */
+/* </head> */
+/* <body> */
+  /* <div id="container"> */
+    /* <h1 id="board">레드향</h1> */
+    /* <p>껍질에 붉은 빛이 돌아 레드향이라 불린다.</p> */
+    /* <p>레드향은 한라봉과 귤을 교배한 것으로 일반 귤보다 2~3배 크고, 과육이 붉고 통통하다.</p> */
+    /* <p>비타민 C와 비타민 P가 풍부해 혈액순환, 감기예방 등에 좋은 것으로 알려져 있다.</p> */
+  /* </div> */
+
+
+     /* style
+        1.자손(자식+손주) 선택자 : 띄어쓰기
+        section p {color: blue;}
+        2.자식 선택자 : >
+        section > p {color}
+        3.인접 형제 선택자(바로 뒤에 오는 하나의 형제만) : +
+        h1 + p    
+        4.전체 형제 선택자(뒤에 오는 모든 형제를 선택) : ~
+        h1 ~ p
+
+       <section>
+             <h1>       가나다라 </h1>
+             <p>마바사</p>
+             <p>weaf</p>
+                 <div>
+                 <p>dwf</p>
+                 <p>awef</p>
+                 </div>    
+        </section>
+       */
+       /* 	style
+             1. [] : 해당 속성이 있는 요소
+              a [href]{background : yellow}
+             2. = :특정 속성값이 있는 요소를 찾음
+              a [target="_blank"]{color:blue} 
+             3.~= : 속성에서 해당글자를 포함하는 용소를 찾음
+              a[class ~="button"]
+             4. |= : -(하이픈)이 포함된 요소까지 찾아줌
+              a[title |="us"]
+             5. ^= : 지정한 속성값의으로 글자로 시작되는 요소
+              a[href ^=title]
+             6. $= : 지정한 속성값의 글자로 끝나는 요소를 찾아줌(확장자찾을때 많이 씀)
+              a [href $=hwp]
+             7.*= : 지정한 속성값의 일부 글자가 포함된 요소만 찾아줌
+              a [href *=us]
+            <ul>
+		<li><a>메인 메뉴 : </a></li>
+		<li><a href="#" target="_blank">메뉴 1</a></li>
+		<li><a href="#">메뉴 2</a></li>
+		<li><a href="#">메뉴 3</a></li>
+		<li><a href="#" class="button">메뉴 4</a></li>
+		<li><a href="#" title="us-">영어</a></li>
+	</ul> */
+
+    /* a태그는 기본적으로 파란색,클릭후에는 보라색
+      :link(방문하지 않은 링크) :visited(방문했던 링크) 
+        .navi a:link, .navi a:visited {color: black(색상변경) text-decoration: nome(밑줄없애기)}
+      :hover(마우스 오버 했을 때)
+        .navi a:hover {color:}
+      :focus(탭키를 누를때)
+        .navi a:focus
+      :active(클릭했을때)
+        .navi a:active
+      >>div도 가능하지만 a태그(메뉴만들기)에 주로 이용
+        */
+
+    /* 
+     target : 타겟팅이 된 부분
+     checked + label : label값이 체크되었을때 속성변경
+     not([type=radio]) : 라디오가 아닌 타입
+     not([type=radio]) :hover : 라디오가 아닌 인풋태그에 마우스를 오버했을때
+     enabled : 활성화된 태그
+     dienabled : 비활성화된 태그
+     .부모태그 ntn(숫자n번) : 해당 속성의 n번째 태그(무슨타입이든 상관없이 n번째)
+     .부모태그p:ntn of(숫자n번) : p태그에서 n번째 태그
+     */
+
+     /* li {}
+      li .new
+      li태그면서 클래스로 new를 가지는 태그
+      li.new::after >> 뒤쪽에 달아주는 것 
+      li.new::before >> 이전에 달아주는 것*
+      p::first-letter >> p의 각 첫번째글자
+      p::first-line >> p들중에서 첫번째라인/
+    </style>
+</head>
+<body>
+    <h1 class="title">자유게시판</h1>
+    <p id="board">게시판</p>
+    <span>태그입니다</span>
+    <form>
+        <input type="text" name="user_id" id="user_id">
+    </form>
+    <p>Lorema</p>
+</body>
+</html>

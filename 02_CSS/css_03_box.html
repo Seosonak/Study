@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        span {
+            width: 500px;
+            height: 500px;
+            background-color: mediumvioletred;
+            margin: 30px
+        }
+    </style>
+</head>
+<body>
+    <!-- <style!-- 태그의 종류 --> -->
+    <!-- 1. 블록태그:영역이 쌓여있는 태그,줄바꿈을 하지 않아도 줄이 바뀜 -->
+    <p>블록 태그</p>
+    <p>블록 태그</p>
+    <p>블록 태그</p>
+    <p>블록 태그</p>
+    <!-- 2. 인라인태그 : 영역이 쌓여있지않고 붙어있다 -->
+    <span>인라인 태그</span>
+    <span>인라인 태그</span>
+    <span>인라인 태그</span>
+    <span>인라인 태그</span>
+
+
+    <!-- 블록과 인라인의 차이 
+
+       block: margin과 padding을 자유롭게 지정 가능 / width-height 자유롭게 변경 가능  
+              div, 시멘틱태그(레이아웃), p, h1~h6, table, 리스트태그(ul,li) ~etc 
+
+       inline: margin과 padding을 좌우만 지정 가능 / width-height 변경 불가능  
+              a, img, span, button, textarea, select, input, label ~etc
+
+       inline-block: inline의 특성을 가지고 있지만 block의 속성도 사용이 가능
+    
+       display: inline block :span이지만 block처럼 사용가능 / none안보임
+             width,height 적용안됨 margin 적용가능
+       -->
+    
+       <!-- 
+        box-sizing
+         > content-box : content영역이 기준
+         > border-box : border영역이 기준 / content,padding,border 모두 포함해서 content영역이 줄어듦
+        -->
+
+        <!-- 
+            box-shadow : 박스에 그림자(컬러미지정시 검정색,지정시 지정색)
+         -->
+
+         <!-- border-style: >> 자료파일border1~5번
+            solid; 실선
+            dotted; 점선 (앞에 숫자 붙일시 해당 두께의 선)
+            dashed; 짧은 직선
+            solid; 테두리 실선
+            color:blue 테두리 색상정하기(상하좌우 각각 지정가능)
+            radius :꼭짓점을 둥굴게,상하좌우 지정가능 (px는 테두리만 %로하면 원형 이미지)
+
+
+          -->
+    
+
+    <!-- div = 박스를 만드는 태그 div안에 div도 넣을수있다 -->
+    <!-- 박스에서 content, border, padding, margin의 역할 -->
+    <!-- margin : border를 기준으로 밖 -->
+    <!-- margin: 0 auto; <<박스가 가운데정렬(많이 쓰임) div안 div만 가운데정렬하면 박스안의 작은박스만 가운데정렬됨
+      여러 박스생성시 위아래로 똑같은 수로 주면 +가 되는게 아니라 겹쳐진다 ex.margin:20 두개면 40x 20o-->
+    <!-- padding : border를 기준으로 안 -->
+    <!-- content가 있어도 border가 기준(content만 쓸 수 있는 영역) -->
+    <!-- margin, padding은 상하좌우가 존재(시계방향) EX: padding,margint 20px (상하좌우 모두) / 30px 10px(상하30 좌우10)
+         30px 10px 20px 50px(상30우10 하20 좌50) / 30px 10px 40px(상30 좌우10 하40) -->
+
+</body>
+</html>
