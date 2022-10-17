@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 제일 많이 쓰는 세가지
+        //  주석 컨트롤+슬래시 -한줄 /* */ -여러줄
+        // alert("test!"); 경고
+
+        // confirm("확인하시겠습니까?"); 확인,취소
+
+        // prompt("입력하세요", 10); 입력 (질문, 초기값)
+        // "" , '' 안에 글자를 입력해야함 줄끝날땐 ; (꼭 붙여야하는건 아니지만 붙이면 마침표라는 표식)
+
+        // console.log > 콘솔로그에 찍힘 
+        // console.log("헬롱");
+        // doument.write > 브라우저에 찍힘
+        // document.write("테스트");
+
+        // num - 변수(그릇) 숫자 - 변수값 : 숫자나 문자
+
+
+        var str = "test"; // str은 문자형
+        console.log(str);
+
+        var str2 = "i" + "am" + str; //문자열 합산(문자를 합쳐줌), 공백을 넣으면 공백도 포함됨
+        console.log(str2);
+
+        var str3 = "1"; // 숫자를 써도 "" 안에 있으면 문자로 인식
+        var sum = 10; // 숫자형
+        // 더하기시 문자형이 하나라도 있으면 문자열합산을 함
+        console.log(str3 + sum);
+        // 따옴표를 출력하는 방법(같은 따옴표는 출력불가)
+        console.log("봄이는 '말티즈'다") //or
+        console.log('봄이는 "말티즈"다') //or
+        console.log("봄이는 \"말티즈\"다")
+
+        // 줄바꿈은 \n 한 칸 띄우기 \t 
+        console.log("봄이는 말티즈다 \t귀엽다 \n사랑스럽다")
+
+        var num = 10;  // num은 숫자형
+        var num2 = 2;
+        var sum = num + num2; //12
+        console.log(num);
+        console.log(num + num2); // 더하기
+        console.log(num - num2); // 빼기
+        console.log(num * num2); // 곱하기
+        console.log(num / num2); // 나누기
+        console.log(num % num2); // 나머지
+        console.log(sum + num);
+        console.log(sum / num2);
+
+        var flag = true; // flag는 boolean형
+        console.log(flag);
+
+        var flag2 = 10 > 2; // >왼쪽이 크다 >= 왼쪽이 크거나 같다
+        console.log(flag2)
+        
+        var flag3 = 10 < 2; // <오른쪽이 크다 =< 오른쪽이 크거나 같다
+        console.log(flag3)
+
+        var flag4 = 10 == 9;  // 두개가 같냐
+        console.log(flag4)
+
+        var flag5 = 10 != 9; // 두개가 같지 않냐
+        console.log(flag5)
+
+
+        var a = 10;
+		var b = 20;
+		var c = 10;
+		var f = "20"; //문자로 인식
+		var result = b == f;  // == 양쪽이 같다 , != 양쪽이 다르다  : 값만 비교
+        var recrult2 = b === f; // === 양쪽이 같다 , !== 양쪽이 다르다 : 값과 자료형 비교(b는 숫자, f는 문자형이라 ===는 거짓 !==는 참) 
+
+        console.log(result)
+        console.log(recrult2)
+
+        var g; // 정의해준게 없어서 undefined로 뜸 
+        var h = null; //null : 빈값
+
+        console.log(g);
+        console.log(h);
+
+        // undefined, null, 빈문자열(''), 0 을 제외한 모든 것은 ture : 얘네는 flase
+
+        console.log(Boolean(b)); //
+
+        var flag6 = 10>2 , flag7 = 10<5 , flag8 = 2>=1;
+
+        console.log(flag6 && (flag7 && flag8))  // && : and(두개 다 true여야 true)
+        console.log(flag6 || flag7 && flag8) // || : or(하나만 true여도 true)
+        console.log(!flag6) // ! : not(반대로)
+        // 앞에 있는 것부터 순서대로 연산 , 수학 () > 곱하기.나누기 ->덧셈뺄셈
+
+        console.log(typeof("안녕")) // typeof 자료형확인
+        
+
+    </script>
+</body>
+</html>
