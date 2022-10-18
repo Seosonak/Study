@@ -2,11 +2,11 @@ import java.util.Scanner;
 public class Hello {
     public static void main(String[] args) {
         
-        String coco = "cat";
+        String poi = "cat";
         String cat = "cat";
         String dog = "dog";
-        boolean cocoIsCat = true;
-        boolean cocoIsDog = false;
+        boolean BomIsDog = true;
+        boolean BomIsCat = false;
         if(BomIsCat){ //false
         System.out.println("봄이는 강아지입니다.");
     } else if(!BomIsCat){ //true

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // if : 만약에 ~라면
+        //조건식이 참이면 alert출력 거짓이면 else출력
+        //조건문 반복문은 모두 중첩가능
+
+        const date = new Date(); //날짜,시간 객체
+        const hour = date.hetHours(); //현재 시간 구하기
+        console.log(hour)
+
+        // if (hour < 12) {
+            // alert('오전입니다.');
+        // } else {
+            // alert('오후입니다.');
+        // }
+
+
+
+
+        // if else if : if도 아니고 , else if도 아니면 else가 출력
+        //&&(and): 두개다 true면 true
+
+        if (hour < 11 ) { //6~11
+            alert('오전입니다');
+        } else if (hour < 15) { //12~18
+            alert('오후입니다');
+
+        if (hour >= 12) {
+            alert('오후입니다.');
+        }
+    }
+        
+
+
+     //   if (273 < 100) {
+     //       alert('true입니다.');
+            
+     //       if (100 > 10) {
+     //           alert(`true`)
+     //   }
+      //  }
+
+        // if (false) {
+            // alert(`true입니다.`);
+        // }
+// 
+        // if (true) {
+            // alert(`true입니다.`);
+        // }
+
+
+
+        //if > () 조건식이 참이면 문구가 뜸 거짓일시 아무것도 뜨지않
+
+
+        
+
+    </script>
+</body>
+</html>

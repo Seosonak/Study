@@ -3,12 +3,20 @@
   <head>
     <title></title>
     <script>
-      const number = 10
+      var number = 10
 
-      console.log(++number)
-      console.log(number++)
-      console.log(++number)
-      console.log(number--)
+      console.log(++number) // 10에서 1을 먼저 증가하면 11 그럼 결과11
+      console.log(number++) // 11
+      // 출력후 +1이기 때문에 여기에선 결과값이 11이 되고, 다음에 console.log(number)를 하면 결과값이 12가 나옴
+
+      console.log(++number) // 13
+      //위의 최종 결과값이 12인데 12에서 먼저 1을 증가하기때문에 13이 됨
+
+      console.log(number--) //13
+       // 대입 후 감소면.... 넘버는 10 10에서 왜 9가 아니지?
+       // 그대로  출력후 아래에 console.log(number)를 치면 12과 나옴
+
+       //위에서부터 숫자가 쌓여서 처음 var number는 10이였지만 11 12 이런식으로 늘어나고 값이 바뀔 수 있음
     </script>
   </head> 
   <body>  
