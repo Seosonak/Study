@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     //continue : 조건이 맞을시 아래 코드 실행하지않고 바로 반복문으로 돌아간다
+     // break : break문을 만나면 아래 코드는 실행되지않고 바로 반복문으로 돌아간다
+     // while, do while, for 문에서 사용
+
+
+
+       // for문이지만 조건식이 ture니까 무한반복 , alert으로 경고창출력
+        // ▼
+        /*
+        for (let i = 0; true; i++) {
+            alert(i + "번째 반복문 입니다.")
+
+            if(i === 2) {  
+                break;
+            }
+            alert('안녕')
+        }
+        alert('프로그램 종료')
+        */
+
+        /*
+
+         // break : break문을 만나면 아래 코드는 실행되지않고 바로 반복문으로 돌아간다
+        //▼
+        for (let i = 0; true; i++) {
+            alert(i + "번째 반복문 입니다.")
+
+            const isContinue = confirm('계속 하시겠습니까?')
+            //확인 : ture 취소 : false
+            if(!isContinue) {  //!이면 반대가 되서 false가 되고 출력이 되지않으며 다시 위로 올라가서 출력
+                //취소를 누르면 !isC가 ture가 되기때문에 break가 실행되고 반복문이 멈춤
+                break;
+            }
+        }
+
+        alert('프로그램 종료')
+        */
+
+        /*
+        //continue : 조건이 맞을시 아래 코드 실행하지않고 바로 반복문으로 돌아간다
+        //▼
+        for (let i = 0; i < 5; i++) { //i가 5보다 작을때 반복실행
+            console.log(i + "번째 반복문입니다.")
+
+            if(i === 2) { //조건이 맞으면 바로for문으로 가서 실행됨,
+                continue;
+            }
+            
+            console.log("안녕하세요")
+        }
+        */
+
+        //이중 for문
+
+        //let output = '';
+
+        /*
+        for (let i = 1; i < 10; i++) { //1~9까지 돌림
+            for (let j = 0; j < i; j++) {  // 중간에 j < i를 j < 7로 배꾸면 위 for가 행 아래 for가 열이 됨
+                output += '*'
+            }
+            output += '\n'
+        }
+
+        console.log(output)
+        */
+
+        let output = '';
+
+        for (let i = 1; i < 10; i++) {
+            output += '*', '\n'
+        }
+        console.log(output)
+       
+    </script>
+    
+</body>
+</html>
