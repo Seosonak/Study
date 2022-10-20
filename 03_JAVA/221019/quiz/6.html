@@ -10,11 +10,14 @@
     <!-- 6. 다음 배열에서 숫자 5를 제거하는 코드를 작성하시오. -->
     <script>
         var arr = [2, 5, 9, 6];
+
         for (var i = 0; i < arr.length; 1++) {
-            arr.splice(1, 1)
-            console.log(arr);
+           if (arr[i] === 5) {
+               arr.splice(i,1);
+           }
         }
-        
+
+        console.log(arr);
 
         
 

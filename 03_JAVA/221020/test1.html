@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.콜백 함수(callback :자바 스크립트에만 있음) : 매개 변수로 함수를 전달한다
+        //함수 자체에 매개변수를 넣을수잇당
+        function callThreeTimes(callback) {
+            for(let i = 0; i < 3; i++) {
+                callback(i) //print(i)
+            }
+        }
+
+        //표현법1.
+        function print(i) {
+            console.log(`${i}번째 함수 호출`)
+        }
+
+        callThreeTimes(print)
+
+        //표현법2
+        callThreeTimes(function(i){
+            console.log(`${i}번째 함수 호출`)
+        }) 
+
+
+        //2.fotEach() : 단순하게 가져와서 출력
+        /*
+        const numbers = [273, 52, 103, 32, 57]
+
+        numbers.forEach(function(value, index, array) {
+           // console.log(`${array}`)
+            console.log(`${index}번째: ${value}`)
+        })*/
+
+        //3.map : return 값들을 모아서 새로운 배열로 만들어준다
+    
+        /*
+        const numbers = [273, 52, 103, 32, 57]
+
+        let result = numbers.map(function(value, index, array){
+            return value * value
+        })
+
+        console.log(result);
+        */
+
+
+        //4.filter : return값이 참일때만 해당 데이터를 모아준다
+
+        const numbers = [0, 1, 2, 3, 4, 5]
+
+        const evenNumbers = numbers.filter(function(value){
+            return value % 2 === 0 //조건식 (짝수구하기)
+        })
+        console.log(`결과: ${evenNumbers}`)
+
+    </script>
+</body>
+</html>

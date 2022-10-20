@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //1.스코프 : scope 함수안의 {}내용을 스코프영역이라함
+          // 라이언 개발자
+          (function () {
+        var num = 100;
+        function menu() {
+          num += 100;
+          alert(num);
+        }
+        menu();
+      })();
+
+      // 어피치 개발자
+      (function () {
+        var num = 100;
+        function menu() {
+          alert(num);
+        }
+      })();
+
+
+      //2.호이스팅(비익명함수) : 정의를 밑에다 해도 끌어올려서 실행, 정의하기전에 써도 실행이된다~
+      //익명함수는 호이스팅이 안되기때문에 먼저 정의해줘야함!
+      a();
+
+        function a() {
+          document.write("haha");
+        }
+
+      b();
+
+      const b = function () {
+        document.write("baba");
+        };
+
+        //전역변수와 지역변수
+        var num = 1;  // >전역변수, 함수기준 함수밖에있는게 전역변수 : 함수안에도 얼마든지 가져다 쓸 수 있음
+        
+            //함수선언
+            function love(){
+              str = '봄이'; // > 앞에 식별자를 붙이지 않으면 전역변수로 인식
+              var b = 10; //지역변수  ,ex : console.log(b); 로 실행하면 찾을수 없다고 나옴
+              var a = num+1;  // >지역변수, 함수(지역)안에서만 사용 가능
+              console.log('a:',a);
+            }
+            love();
+            console.log(num);
+
+      //블록변수let(=function,const)   : 자신이 속한 중괄호{}안에서만 사용 가능 (var은 포함X,중괄호넘나들수있음)
+    //▼ var로 썼을때
+      function logScope(){
+         var local = 2;
+        if(local){
+         var local = '다른 값';
+         console.log('블럭안의 var:',local);
+        }
+          console.log('local',local)
+    }
+            logScope();
+           
+      //▼ let으로 썼을때      
+      function logScope(){
+        let local = 2;
+         if(local){
+        let local = '다른 값';
+         console.log('블럭안의 var:',local);
+        }
+        console.log('local',local)
+    }
+        logScope()
+    </script>
+</body>
+</html>

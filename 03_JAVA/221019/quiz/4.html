@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +12,21 @@
     예를 들어 225468을 수락하면 출력은 -2-254-6-8이어야 합니다.
     -->
     <script>
-        const str = (prompt("225468")
+        const str = prompt("숫자를 입력하시오");
         const result = [];  //const는 상수지만 배열에서 push는 가능하다.
         
 
         
-        for(let i = 0; 1 < str.length; 1++) {
-            console.push(str[i])
+        for(let x = 0; x < str.length; x++) {
+            if(str[x] % 2 === 0){
+                result.push('-', str[x]);
+            }
+            else{
+             result.push(str[x]);
+            }
         }
+
+        console.log(result);
 
     </script>
 </body>

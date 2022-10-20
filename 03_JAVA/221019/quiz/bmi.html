@@ -14,7 +14,7 @@
         //return값은 bmi지수 리턴 , 세가지 모양 함수(익명, 비익명, 화살표)
         // bmi = 몸무게kg 나누기 (신장m x 신장m)
 
-
+        /*
         const sum = function(a, b) {
           let sum = (a % (b * b))
           console.log(sum);
@@ -24,7 +24,7 @@
         sum(70, 170)
         
 
-
+        */
         /*
         function sum() {
             console.log(sum)
@@ -36,6 +36,28 @@
         }
         */
 
+        //정답
+        //함수정의
+        
+        function bmi(weight, height) {
+            let result = weight / (height * height);
+            return result;
+        }
+
+        //매개변수
+        let result2 = bmi(60, 160)
+
+        console.log(result2)
+
+        const bmi = function(weight, height) {
+            let result = weight / (height * height);
+            return
+        }
+
+        const bmi = (weight, height) => {
+           return weight / (height * height);
+            
+        }
 
     </script>
 </body>

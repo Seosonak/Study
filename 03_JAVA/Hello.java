@@ -13,11 +13,11 @@ public class Hello {
         System.out.println("봄이는 고양이가 아닙니다");
         System.out.println("봄이는 강아지입니다.");
     } 
-                        // System.out.println("Hello World"); //
-        // int a;
-        // int b;
-        // a=1;
-        // b=2;
-        // System.out.println(a+b);
+                        System.out.println("Hello World"); //
+         int a;
+        int b;
+        a=1;
+        b=2;
+        System.out.println(a+b);
     }
 }
