@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            /* 클릭을 여러번 했을때 글자가 선택되는걸 방지 */
+            user-select: none;  
+        }
+    </style>
+</head>
+<body>
+    <h1> 클릭횟수 : 0 </h1>
+    <button id="connect">이벤트 연결</button>
+    <button id="disconnect"> 이벤트 제거</button>
+    <p>이벤트 연결 상태: 해제</p>
+
+    <script>
+        //event : 클릭했을때(사용자가 웹상에서 일으킬수있는 모든것)
+        let counter = 0
+        let isConnect = false //현재 이벤트 상태를 판단하는 변수(저게된건지 아닌지)
+        const h1 = document.querySelector('h1')
+        const p = document.querySelector('p')
+        const conButton = document.querySelector('#connect')
+        const disconButton = document.querySelector('#disconnect')
+
+
+        //addEventListener('이벤트명', 콜백 함수)
+
+
+        //입력방법1
+        /*
+            h1.addEventListener('click', function(){
+            //클릭했을때 실행되길 원하는 코드 작성
+            counter++
+            h1.textContent = `클릭횟수: ${counter}`
+        })
+        */
+
+        //입력방법2
+    
+        const listener = function(){
+            counter++
+            h1.textContent = `클릭횟수: ${counter}`
+        }
+
+        h1.addEventListener('click', listener)
+
+        conButton.addEventListener('click', function(){
+            if (isConnect === false) { //이벤트가 연결이 안된 상태일때
+                h1.addEventListener('click', listener)
+                p.textContent = '이벤트 연결 상태: 연결'
+                isConnect = ture
+            }
+        })
+        disconButton.addEventListener('click', function(){
+            if (isConnect === ture) {
+                h1.removeEventListener('click', listener)
+                p.textContent = '이벤트 연결 상태: 해제'
+                isConnect = false
+            }
+        })
+
+        //removeEventListener('지우고 싶은 이벤트명', 콜백 함수) : 이벤트를 지워주는 속성
+       // h1.removeEventListener('click', listener)
+
+       //h1.addEventListener('click', () => {})  : es6버전
+
+    </script>
+</body>
+</html>

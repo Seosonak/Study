@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        첫번째 div
+        <span>테스트</span>
+    </div>
+    <h1 class="txt">안녕하세요</h1>
+
+    <script>
+
+        
+
+        //createElement(태그명) : 해당 요소를 실행
+        const header = document.createElement('h1')
+        console.log(header)
+
+        //appendChild : 부모 요소 아래에 자식 요소로 넣어준다
+        document.body.appendChild(header)
+
+        const box = document.querySelector('.box')
+        const span = document.querySelector('span')
+        box.appendChild(header)
+
+        //removeChild : 자식 태그를 지워줌
+        box.removeChild(span)
+
+        /*
+    <div class="box">
+        <span class="inner">안녕안녕안녕</span>
+    </div>
+    <>script
+        const header = document.createElement('h1')
+        const inner = document.querySelector('.inner')
+
+        //parentNode : 부모 태그를 선택해준다
+        inner.parentNode.appendChild(header)
+    */
+    </script>
+</body>
+</html>
