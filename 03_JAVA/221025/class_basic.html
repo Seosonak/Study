@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+<body>
+    <!-- 
+    class > es5엔 없고 es6부터 생긴것
+    객체를 생성하기위한 틀(설계)
+    필요한정보(요소)만 추리는 것 = 추상화
+    -->
+    <script>
+        //prototype의 function과 같다고 보면 됨
+        //class = 속성 + 메소드 
+        //java와 개념이 비슷함
+        class Pet {
+            //constructor : 생성자 함수 ▼속성
+            constructor(nameVal, ageVal, catVal) {
+                this.name = nameVal
+                this.age = ageVal
+                this.cat = catVal
+            } 
+            
+            //메소드 함수
+            eat (food) { //함수
+                console.log(`${this.name}이가 ${food}를 먹습니다.`) // >이미 객체가 생성되어있어서
+            }  //food는 매개변수로 받아와야함
+
+            //나이출력
+            agePrint () {
+                console.log(`${this.name}의 나이는 ${age}입니다.`)
+            }
+            //종 출력
+            catPrint () {
+                console.log(`${this.name}의 종운 ${this.cat}입니다.`)
+            }
+        }
+
+
+        //매개변수의 값이 위의 nameVal,ageVal,catVal에 각각 들어감
+        //객체 
+        //실제 코드로 구현한것 = 인스턴스(객체:pet)
+        const pet = new Pet('구름', 7, '코숏')  //객체,인스턴스 둘 다 불릴수있음
+        const pet2 = new Pet('별', 3, '페르시안')
+
+        console.log(pet.name)
+        console.log(pet.age)
+        console.log(pet.cat)
+
+        pet.eat('통조림')
+        pet.agePrint()
+        pet.catPrint()
+
+        pet2.eat('통조림')
+        pet2.agePrint()
+        pet2.catPrint()
+    </script>
+</body>
+</html>
