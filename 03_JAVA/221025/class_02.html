@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>클래스 상속</title>
 </head>
 <body>
     <script>
+
+        
         //객체 = 속성 + 메소드
         //class 설계도  설계도구현
         class Rectangle {
@@ -54,9 +56,10 @@
 
         //자식클래스는 부모클래스에 있는 속성과 메소드를 쓸 수 있다
         const square = new Square(10, 20)
-        console.log(square.width)
-        console.log(square.getPerimeter())
-        console.log(square.getArea())
+        console.log(`width: ${square.width}`)
+        console.log(`height: ${square.height}`)
+        console.log(`getPerimeter(): ${square.getPerimeter()}`)
+        console.log(`getArea(): ${square.getArea()}`)
 
     </script>
 </body>

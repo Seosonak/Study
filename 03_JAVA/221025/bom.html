@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM 자주쓰이는것</title>
+</head>
+<body>
+    <button onclick="loc()">이동!</button>
+    <button onclick="back()">뒤로!</button>
+    <script>
+        //href > 주소전체
+        //pathname > query 뒤의 주소만보여줌
+        //port 
+        function loc () {
+            location.herf = "./bom_test.html"  //페이지 이동
+        }
+
+        function back () {
+            history.go(-1)   //뒤로가기 , history.back()
+        }
+
+        /*
+        요소가 될수있는건 DOM
+        BOM 브라우저객체 (브라우저전체창)
+        */
+        var sWidth =  screen.width; //해상도
+        var sHeight =  screen.height; //해상도
+        var sColor =  screen.colorDepth;
+        console.log(sWidth);
+        console.log(sHeight);
+        console.log(sColor);
+
+    var local = location.href;
+    console.log(local);
+
+    var NaviInfo = "User-agent header sent: " + navigator.userAgent;
+    console.log(NaviInfo);
+    </script>
+    
+</body>
+</html>
