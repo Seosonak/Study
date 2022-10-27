@@ -15,7 +15,7 @@
         a {text-decoration: none !important;}
         img {border: 0;}
         ul {list-style: none;}
-        header, footer, section { box-sizing:border-box;}
+        header, footer, section { box-sizing: border-box;}
 
         .wrap {
             background: wheat;
@@ -34,7 +34,6 @@
         .header__nav > h1 {
             width: 100px;
             height: 120px;
-            background: #9de25c;
         }
 
         .header__nav > nav {
@@ -55,7 +54,7 @@
 
         section .con {
             max-width: 1440px;
-            margin: 0 auto; /* 가운데정렬 */  
+            margin: 0 auto;
             height: 100%;
         }
 
@@ -64,7 +63,7 @@
         }
 
         .slider__content {
-            background: cadetblue;
+            background: thistle;
         }
 
         .youtube {
@@ -72,15 +71,15 @@
         }
 
         .youtube__content {
-            background: cornflowerblue;
+	        background:tomato;
         }
 
         .sns {
-            height: 160x;
+            height: 160px;
         }
 
         .sns__content {
-            background: darksalmon;
+            background: turquoise;
         }
 
         .sns__content > ul {
@@ -108,25 +107,25 @@
         }
 
         .guide__content > .content__app {
-            background: deeppink;
+            background: hotpink;
         }
 
         .guide__content > .content__delivery {
-            background: greenyellow;
+            background: indianred;
         }
-
+        
         .store {
             height: 597px;
         }
 
-        .store__content ul {
+        .store__content {
             background: honeydew;
         }
 
         .store__content ul {
-            /* float를 쓰면 부모태그에 overflow: hidden 줘야함 */
+            /* ★float를 쓰면 부모태그에 overflow: hidden을 줘야 한다 */
             overflow: hidden;
-            /* 숫자계산법> 1144 나누기 1440 */
+            /* 1144 ÷ 1440 */
             width: 79.44%;
             margin: 0 auto;
         }
@@ -145,13 +144,12 @@
             background: gray;
         }
 
-        .footter {
-            height: 680px;
-            background: #474747;
+        .footer{
+            height:680px;
+            background:#474747;
         }
 
         /* 767 ~ 1023px */
-
         @media all and (min-width:767px) {
             .guide__content {
                 flex-direction: row;
@@ -162,31 +160,31 @@
             }
         }
 
-
         /* 1024px 이상 */
-
         @media all and (min-width:1024px) {
-
+            
         }
+
 
 
     </style>
 </head>
 <body>
-    <header class="header"></header>
-    <div class="header__nav">
-        <h1>logo</h1>
-        <nav>
-            <ul>
-                <li>메뉴소개</li>
-                <li>매장소개</li>
-                <li>이벤트</li>
-                <li>브랜드스토리</li>
-            </ul>
-        </nav>
-        <div class="delivery-order">딜리버리 주문</div>
-    </div>
-    <div class="wrap">
+    <header class="header">
+        <div class="header__nav">
+            <h1>logo</h1>
+            <nav>
+                <ul>
+                    <li>메뉴소개</li>
+                    <li>매장소개</li>
+                    <li>이벤트</li>
+                    <li>브랜드스토리</li>
+                </ul>
+            </nav>
+            <div class="delivery-order">딜리버리 주문</div>
+        </div>
+    </header>
+    <main class="wrap">
         <section class="slider">
             <div class="slider__content con"></div>
         </section>
@@ -224,7 +222,7 @@
         <section class="banner">
             <div class="banner__content con"></div>
         </section>
-    </div>
+    </main>
     <footer class="footer"></footer>
 </body>
 </html>
